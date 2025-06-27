@@ -1,7 +1,8 @@
 #!/bin/bash
 #by guicapelleto
 
-lang=$1
+project=$1
+lang=$2
 
 echo ""
 echo "##################################"
@@ -10,10 +11,10 @@ echo "##################################"
 echo ""
 echo ""
 
-if [ "$lang" == "" ] || [ "$lang" == "-h" ] || [ "$lang" == "--help" ]
+if [ "$project" == "" ] || [ "$project" == "-h" ] || [ "$project" == "--help" ] || [ "$lang" == "-h" ] || [ "$lang" == "--help" ] || [ "$lang" == "" ]
 then
     echo "Usage:"
-    echo "$0 [LANGUAGE] "
+    echo "$0 [PROJECT_FOLDER] [LANGUAGE] "
     echo ""
     echo ""
     echo "Supported languages:"
@@ -28,9 +29,10 @@ then
     echo "Swift"
     echo ""
     echo ""
-    echo "You must be at project root folder"
     echo "CodeQL must be installed, if it's not, please check at: https://github.com/github/codeql-action/releases"
     echo "Make sure your PATH Environment is up to date with codeql"
+    echo ""
+    echo "Ex: $0 /tmp/mytmpproj/js javascript"
     echo ""
     echo ""
     exit
@@ -39,7 +41,7 @@ fi
 
 
 echo "Building database..."
-codeql database create codeql-db --language=$lang --source-root=.
+codeql database create codeql-db --language=$lang --source-root=$project/.
 echo ""
 echo ""
 echo "Checking latest queries..."
