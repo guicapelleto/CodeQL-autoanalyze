@@ -1,26 +1,26 @@
-##################################
-########CodeQL autoanalyze########
-##################################
+##################################<br>
+########CodeQL autoanalyze#########<br>
+##################################<br>
 
-Usage:
+Usage:<br>
 
-./codeql-autoanalyze.sh [PROJECT_FOLDER] [LANGUAGE]
-
-
-Supported languages:
-C
-C++
-C#
-Python
-Go Lang
-Java
-Javascript
-Ruby
-Swift
+./codeql-autoanalyze.sh [PROJECT_FOLDER] [LANGUAGE]<br>
 
 
-CodeQL must be installed, if it's not, please check at: https://github.com/github/codeql-action/releases
-Make sure your PATH Environment is up to date with codeql
+Supported languages:<br>
+C<br>
+C++<br>
+C#<br>
+Python<br>
+Go Lang<br>
+Java<br>
+Javascript<br>
+Ruby<br>
+Swift<br>
+<br>
+<br>
+CodeQL must be installed, if it's not, please check at: https://github.com/github/codeql-action/releases<br>
+Make sure your PATH Environment is up to date with codeql<br>
 
-Ex: ./codeql-autoanalyze.sh /tmp/mytmpproj/js javascript
+Ex: <b>./codeql-autoanalyze.sh /tmp/mytmpproj/js javascript</b>
 
